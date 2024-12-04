@@ -15,6 +15,11 @@ const ContextProvider =(props)=>{
     const delayPara =(index, nextWord)=>{
 
     }
+
+    const newChat =()=>{
+        setLoading(false);
+        setShowResult(false);
+    }
     
     const onSent = async (prompt) =>{
         console.log(prompt== "");
@@ -60,7 +65,7 @@ const ContextProvider =(props)=>{
         resultData,
         input,
         setInput,
-        
+        newChat
     }
     return(
         <Context.Provider value={contextValue}>
